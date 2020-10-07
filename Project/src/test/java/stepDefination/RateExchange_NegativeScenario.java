@@ -25,10 +25,9 @@ public class RateExchange_NegativeScenario {
 
 	@Then("validate the response status {string}")
 	public void validate_the_response_status(String status) {
+		response.then().log().body();
 		Assert.assertEquals(responseStatus, status);
-		
 	}
-
 	
 	
 }
